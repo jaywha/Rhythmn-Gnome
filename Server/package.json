@@ -1,0 +1,32 @@
+{
+  "name": "rhythmn-gnome",
+  "version": "1.0.0",
+  "description": "Simple music bot for local use only",
+  "main": "index.js",
+  "scripts": {
+    "test": "soundcheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywha/Rhythm-Gnome.git"
+  },
+  "keywords": [
+    "rhythm",
+    "groovy",
+    "music",
+    "discord",
+    "bot"
+  ],
+  "author": "Dizthenes & yMqdara87",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaywha/Rhythm-Gnome/issues"
+  },
+  "homepage": "https://github.com/jaywha/Rhythm-Gnome#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1"
+  }
+}
