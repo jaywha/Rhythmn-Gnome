@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-const Record = (props) => (
+const Record = (props) => (  
   <tr>
     <td>{props.record.person_name}</td>
     <td>{props.record.person_position}</td>
@@ -44,9 +44,14 @@ export default class RecordList extends Component {
 
   // This method will delete a record based on the method
   deleteRecord(id) {
-    axios.delete("http://localhost:5000/" + id).then((response) => {
-      console.log(response.data);
-    });
+    axios.delete("http://localhost:5000/" + id).then(
+      (response) => {
+        console.log(response.data);
+      },
+      (response) => {
+        console.error(response.data);
+      }
+    );
 
     this.setState({
       record: this.state.records.filter((el) => el._id !== id),

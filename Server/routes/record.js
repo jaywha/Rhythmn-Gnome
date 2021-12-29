@@ -74,11 +74,15 @@ recordRoutes.route("/update/:id").post(function (req, response) {
 recordRoutes.route("/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
-  db_connect.collection("records").deleteOne(myquery, function (err, obj) {
-    if (err) throw err;
-    console.log("1 document deleted");
-    response.status(obj);
-  });
+  try {
+    db_connect.collection("records").deleteOne(myquery, function (err, obj) {
+      if (err) throw err;
+      console.log("1 document deleted");
+      response.status(obj);
+    });
+  } catch(err) {
+    console.error(err);
+  }
 });
 
 module.exports = recordRoutes;
