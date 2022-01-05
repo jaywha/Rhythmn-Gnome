@@ -8,11 +8,17 @@ import Navbar from "./components/navbar";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import RecordList from "./components/recordList";
+import SongList from "./components/songList";
 
 const App = () => {
   return (
     <div>
       <Navbar />
+      <Route exact path="/">
+        <SongList />
+      </Route>
+      <hr />
+      <hr />
       <Route exact path="/">
         <RecordList />
       </Route>
