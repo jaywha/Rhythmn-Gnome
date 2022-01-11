@@ -9,6 +9,7 @@ import Edit from "./components/edit";
 import Create from "./components/create";
 import RecordList from "./components/recordList";
 import SongList from "./components/songList";
+import CreateSong from "./components/createSong";
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
       <Navbar />
       <Route exact path="/">
         <SongList />
+      </Route>
+      <Route path="/createSong">
+          <CreateSong />
       </Route>
       <hr />
       <hr />
