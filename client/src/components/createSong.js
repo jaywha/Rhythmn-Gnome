@@ -112,6 +112,8 @@ export default class CreateSong extends Component {
                 album: ""
             }
         });
+
+        window.location.reload(false);
     }
 
     // UI -- Form Code
@@ -120,6 +122,7 @@ export default class CreateSong extends Component {
             <div style={{marginTop: 20}}>
                 <h3>Add New Song</h3>
                 <form onSubmit={this.onSubmit}>
+                    {/*
                     <div className="form-group">
                         <label>Position in Queue: </label>
                         <input
@@ -129,6 +132,7 @@ export default class CreateSong extends Component {
                             onChange={this.onChangeSongQueuePosition}
                         />
                     </div>
+                    */}
                     <div className="form-group">
                         <label>Song Name: </label>
                         <input
@@ -138,6 +142,7 @@ export default class CreateSong extends Component {
                             onChange={this.onChangeSongName}
                         />
                     </div>
+                    {/*
                     <div className="form-group">
                         <label>Song Length (in seconds): </label>
                         <input
@@ -147,6 +152,7 @@ export default class CreateSong extends Component {
                             onChange={this.onChangeSongLength}
                         />
                     </div>
+                    */}
                     <div className="form-group">
                         <label>Song URL (link from Spotify, YouTube, etc.): </label>
                         <input
@@ -156,6 +162,7 @@ export default class CreateSong extends Component {
                             onChange={this.onChangeSongURL}
                         />
                     </div>
+                    {/*
                     <div className="form-group">
                         <label>Song Icon URL: </label>
                         <input
@@ -165,6 +172,7 @@ export default class CreateSong extends Component {
                             onChange={this.onChangeSongIcon}
                         />
                     </div>
+                    */}
                     <div className="form-group">
                         <label>Artist Name: </label>
                         <input

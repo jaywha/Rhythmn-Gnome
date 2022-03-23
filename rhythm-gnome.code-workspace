@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.fontSize": 10,
+		"debug.console.fontSize": 10
+	}
 }

@@ -7,7 +7,7 @@ const Song = (props) => (
         <td>{props.song.name}</td>
         <td>{props.song.artist.name}</td>
         <td>
-            <Link to={{ pathname: props.song.URL}}>Listen Here!</Link>
+            <Link to={{ pathname: props.song.url}} target="_blank">Listen Here!</Link>
         </td>
     </tr>
 );
